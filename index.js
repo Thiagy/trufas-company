@@ -4,15 +4,15 @@ const https = require('https')
 
 const options = {
 
-//     //tls
-//     key: fs.readFileSync(path.join(__dirname, '/etc/letsencrypt/live/cert.thiagosoftwareengineer.shop/fullchain.pem')),
-//     cert: fs.readFileSync(path.join(__dirname, '/etc/letsencrypt/live/cert.thiagosoftwareengineer.shop/privkey.pem')),
+    //tls
+     key: fs.readFileSync(path.join(__dirname, '/etc/letsencrypt/live/cert.thiagosoftwareengineer.shop/fullchain.pem')),
+     cert: fs.readFileSync(path.join(__dirname, '/etc/letsencrypt/live/cert.thiagosoftwareengineer.shop/privkey.pem')),
     
-//     //mtls
-//     ca: fs.readFileSync(path.join(__dirname, './ca-gerencianet.crt')),
-//     minVersion: 'TLSv1.2',
-//     requestCert: true,
-//     rejectUnauthorized: false
+     //mtls
+     ca: fs.readFileSync(path.join(__dirname, './ca-gerencianet.crt')),
+     minVersion: 'TLSv1.2',
+     requestCert: true,
+     rejectUnauthorized: false
 
 }
 
