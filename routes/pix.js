@@ -34,12 +34,26 @@ router.post('/cobpix', async (req, res) => {
 
         res.status(200).json({ imagemQrcode: qrcode.imagemQrcode, txid: cobranca.txid });
 
-
     } catch (error) {
 
         console.log(error)
 
     }
+    
+});
+
+router.post('/webhook/pix', async (req, res) => {
+
+    console.log(req.client)
+    console.log(req.body)
+    
+    if(!req.client.authorized){
+
+        return res.status(401).send('Invalid client certificate.')
+
+    }
+
+    res.send({ok: 1})
     
 });
 
